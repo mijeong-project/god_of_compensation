@@ -7,8 +7,8 @@
     --skyblue : #DEE9FF;
 }
 
-#wrap{ max-width: 1920px; margin: auto; font-family:'S-CoreDream-3Light'; word-break: keep-all; }
-section{ max-width: 1440px; margin: auto;}
+#wrap{ max-width: 1920px; margin: auto; font-family:'S-CoreDream-3Light'; word-break: keep-all;  text-align: center;}
+section{ max-width: 1920px; margin: auto;}
 .inner{ max-width: 1200px; margin: auto;}
 
 b{ font-weight: 600;}
@@ -17,6 +17,8 @@ b{ font-weight: 600;}
 .fc-white{ color: #F0EFF4;}
 .fc-black{ color: #000;}
 .fc-skyblue{ color: #DEE9FF;}
+.fc-red { color: red;}
+.fc-888 { color: #888;}
 
 /* size */
 .f80{ font-size: 80px;}
