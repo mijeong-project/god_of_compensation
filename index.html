@@ -11,20 +11,69 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
+
     <!-- js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="js/jquery-3.7.1.min.js"></script>
     <script defer src="js/style.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 
 </head>
 
-
 <body>
+
+    <div class="modal">
+        <div class="modal__title">
+            <img src="./img/LOGO.png" alt="로고이미지">
+            <p class="f30">상담 신청하기</p>
+        </div>
+
+        <div class="modal__txt">
+            <h3 class="f30 fc-888">빠른 상담을 위해</h3>
+            <h2 class="f40 fw600">최소한의 정보만 받고 있어요</h2>
+        </div>
+
+        <form>
+            <div class="modal__name">
+                <label for="name">이름
+                    <b class="fc-red">*</b>
+                </label>
+                <input type="text" id="name" placeholder="예) 홍길동">
+            </div>
+
+            <div class="modal__phon">
+                <label for="phon">휴대전화
+                    <b class="fc-red">*</b>
+                </label>
+                <input type="text" id="phon" placeholder="-를 제외한 번호만 입력해주세요.">
+            </div>
+
+            <div class="modal__location">
+                <label for="city">지역
+                    <b class="fc-red">*</b>
+                </label>
+
+                <div class="selsct__group">
+                    <select name="" id="city" onchange="updateDistrict()">
+                        <option value="">시/도</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="부산">부산</option>
+                    </select>
+
+
+                    <select id="district">
+                        <option value="">시/군/구</option>
+                        <!-- 여기에 자동으로 시군구가 들어감 -->
+                    </select>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
 
     <div id="wrap">
         <!-- main -->
@@ -82,55 +131,107 @@
 
                     </div>
 
-                </div>
-            </section>
+                    <div class="sec02">
+                        <p class="f30 fw600">가입은 쉬웠는데 받기는 <br>
+                            용어부터 어렵죠?</p>
 
-            <!-- #section -->
-            <section id="section">
+                        <p class="f30 fw600">나의 보험금 관련된 건 <b class="sec02__before fc-white"> 싹 다 </b> 찾아드려요!</p>
 
-                <div class="inner">
+                        <img src="./img/money-back.png" alt="돈주머니 이미지">
 
+                        <h3 class="f30 fw600">보상의신 고객분들은 평균 <br>
+                            <b class="sec02__before fc-white"> 80만원 이상 </b> 찾아냈어요!
+                        </h3>
+                    </div>
 
+                    <div class="sec03">
+                        <ul class="sec03__ul">
+                            <li class="fw600">못받은 보험금</li>
+                            <li><img src="./img/adress-icon.png" alt="못받은 보험금 아이콘"></li>
+                            <li class="fw200">주소 불명 등으로 <br> 못 받은 보험금</li>
+                        </ul>
 
+                        <ul class="sec03__ul">
+                            <li class="fw600">못찾은 보험금</li>
+                            <li><img src="./img/thinking-icon.png" alt="못찾는 보험금 아이콘"></li>
+                            <li class="fw200">청구 또는 지급되지 <br> 않은 보험금</li>
+                        </ul>
+                    </div>
 
+                    <div class="sec04">
+                        <ol class="sec04__ol">
+                            <li>교통사고 합의금 외 추가 보험금</li>
+                            <li>건강검진 후 수술비 관련 보험금</li>
+                            <li>치아 발치 후 후유장해 관련 보험금</li>
+                        </ol>
+                    </div>
 
-                    <!-- 슬라이드 -->
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                        </div>
+                    <!-- 이 영역 .swiper-slide 안에 이벤트 이미지 넣으시면 됩니다  -->
+                    <div class="sec05">
                         <div class="swiper-button-next"></div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                </div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                            </div>
+                        </div>
+
                         <div class="swiper-button-prev"></div>
                     </div>
 
+                </div>
+            </section>
 
+            <section id="section">
+                <div class="sec06">
+                    <h3 class="fc-white f30">사라지전에 돈을 찾으시려면</h3>
+                    <h2 class="fc-white f40 fw600">보상의신 어때요?</h2>
+
+                    <ul class="sec06__ul">
+                        <li><img src="./img/step01.png" alt="무료상담 신청 아이콘"></li>
+                        <li><img src="./img/step02.png" alt="전문가 배정 아이콘"></li>
+                        <li><img src="./img/step04.png" alt="상담을 통한 보험금 찾기 아이콘"></li>
+                        <li><img src="./img/step03.png" alt="보험금 청구 후 입금받기 아이콘"></li>
+                    </ul>
 
                 </div>
-
             </section>
-            <!-- // #section -->
 
         </main>
         <!-- //main -->
 
-
         <!-- footer -->
-        <footer id="footer">
+        <footer id="footer" class="f16">
 
             <!-- f_logo -->
-            <div class="f_logo"></div>
-
+            <div class="footer__logo">
+                <img src="./img/LOGO.png" alt="로고 아이콘">
+            </div>
+            <ul class="footer__txt">
+                <li>부산광역시 서면로 00번길 000건물</li>
+                <li>사업자등록번호 : 111-111-1111</li>
+                <li>공식 홈페이지 주소: https://naver.com</li>
+                <li>대표번호 1234-5678</li>
+            </ul>
             <!-- 카피라이트 -->
-            <div class="copy"></div>
+            <div class="footer__copy">
+                c 카피라이트 영역
+            </div>
 
         </footer>
         <!-- //footer -->
 
+        <!-- 고정메뉴 -->
+        <div class="fixed">
+            <a href="#" class="f30 fc-white">무료 상담신청 ></a>
+        </div>
+
     </div>
     <!--//#wrap-->
+
 
 </body>
 
