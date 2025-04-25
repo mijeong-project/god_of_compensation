@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+:root{
+    --blue : #286FFF;
+    --white : #F0EFF4;
+    --black : #000;
+    --skyblue : #DEE9FF;
+}
+
+#wrap{ max-width: 1920px; margin: auto; font-family:'S-CoreDream-3Light'; word-break: keep-all; }
+section{ max-width: 1440px; margin: auto;}
+.inner{ max-width: 1200px; margin: auto;}
+
+b{ font-weight: 600;}
+/* color */
+.fc-blue{ color: #286FFF;}
+.fc-white{ color: #F0EFF4;}
+.fc-black{ color: #000;}
+.fc-skyblue{ color: #DEE9FF;}
+
+/* size */
+.f80{ font-size: 80px;}
+.f60{ font-size: 60px;}
+.f40{ font-size: 40px;}
+.f30{ font-size: 30px;}
+.f20{ font-size: 20px;}
+.f16{ font-size: 16px;}
+
+/* weight */
+.fw800{ font-weight: 800;}
+.fw600{ font-weight: 600;}
+.fw400{ font-weight: 400;}
+.fw200{ font-weight: 200; }
+
