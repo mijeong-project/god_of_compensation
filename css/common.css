@@ -20,6 +20,13 @@ b{ font-weight: 600;}
 .fc-red { color: red;}
 .fc-888 { color: #888;}
 
+/* weight */
+.fw800{ font-weight: 800;}
+.fw600{ font-weight: 600;}
+.fw400{ font-weight: 400;}
+.fw200{ font-weight: 200; }
+
+
 /* size */
 .f80{ font-size: 80px;}
 .f60{ font-size: 60px;}
@@ -28,9 +35,11 @@ b{ font-weight: 600;}
 .f20{ font-size: 20px;}
 .f16{ font-size: 16px;}
 
-/* weight */
-.fw800{ font-weight: 800;}
-.fw600{ font-weight: 600;}
-.fw400{ font-weight: 400;}
-.fw200{ font-weight: 200; }
-
+@media (max-width: 500px){
+.f80{ font-size: 70px;}
+.f60{ font-size: 50px;}
+.f40{ font-size: 30px;}
+.f30{ font-size: 20px;}
+.f20{ font-size: 16px;}
+.f16{ font-size: 12px;}
+}

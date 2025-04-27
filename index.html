@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
@@ -24,55 +25,96 @@
 
 <body>
 
-    <div class="modal">
-        <div class="modal__title">
-            <img src="./img/LOGO.png" alt="로고이미지">
-            <p class="f30">상담 신청하기</p>
-        </div>
+    <section class="modal form__section">
+        <div class="form__backdrop"></div>
+        <div class="form__wrapper">
+            <span class="close">&times;</span>
 
-        <div class="modal__txt">
-            <h3 class="f30 fc-888">빠른 상담을 위해</h3>
-            <h2 class="f40 fw600">최소한의 정보만 받고 있어요</h2>
-        </div>
+            <h2 class="title f20">
+                <img src="./img/LOGO.png" alt="로고이미지">
+                상담 신청하기
+            </h2>
+            <p class="subtitle">빠른 상담을 위해<br><strong class="fw600 fc-black f30">최소한의 정보만 받고 있어요</strong></p>
 
-        <form>
-            <div class="modal__name">
-                <label for="name">이름
-                    <b class="fc-red">*</b>
-                </label>
-                <input type="text" id="name" placeholder="예) 홍길동">
-            </div>
+            <form class="consult__form">
 
-            <div class="modal__phon">
-                <label for="phon">휴대전화
-                    <b class="fc-red">*</b>
-                </label>
-                <input type="text" id="phon" placeholder="-를 제외한 번호만 입력해주세요.">
-            </div>
-
-            <div class="modal__location">
-                <label for="city">지역
-                    <b class="fc-red">*</b>
-                </label>
-
-                <div class="selsct__group">
-                    <select name="" id="city" onchange="updateDistrict()">
-                        <option value="">시/도</option>
-                        <option value="서울">서울</option>
-                        <option value="경기">경기</option>
-                        <option value="부산">부산</option>
-                    </select>
-
-
-                    <select id="district">
-                        <option value="">시/군/구</option>
-                        <!-- 여기에 자동으로 시군구가 들어감 -->
-                    </select>
+                <div class="form__group">
+                    <label for="name">이름 <b class="fc-red">*</b></label>
+                    <input type="text" id="name" placeholder="예) 홍길동">
                 </div>
-            </div>
 
-        </form>
+                <div class="form__group">
+                    <label for="phone">휴대전화 <b class="fc-red">*</b></label>
+                    <input type="text" id="phone" placeholder="-를 제외한 번호만 입력해주세요">
+                </div>
+
+                <div class="form__group">
+                    <label>지역 <b class="fc-red">*</b></label>
+                    <div class="select__group">
+                        <select id="city" onchange="updateDistrict()">
+                            <option value="">시/도</option>
+                            <option value="서울">서울</option>
+                            <option value="경기">경기</option>
+                            <option value="부산">부산</option>
+                        </select>
+
+                        <select id="district">
+                            <option value="">시/군/구</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="terms">
+                    
+                    <div class="terms__row">
+                      <div class="custom-checkbox" onclick="toggleCheck(this)">
+                        <input type="checkbox" id="selectall" style="display: none;">
+                      </div>
+                      <label for="selectall" onclick="toggleCheck(this)" class="bold">약관에 전체 동의합니다</label>
+                      <small>* 전체 동의 시 선택 동의도 포함되며, 개별 선택도 가능합니다.</small>
+                    </div>
+                  
+                    <div class="terms__row">
+                      <div class="custom-checkbox" onclick="toggleCheck(this)">
+                        <input type="checkbox" id="agree01" name="agree" value="agree01" style="display: none;">
+                      </div>
+                      <label for="agree01" onclick="toggleCheck(this)">채용상담을 위한 개인정보 동의서 (필수)</label>
+                      <button type="button" class="open-modal" data-target="modal1">></button>
+                    </div>
+                  
+                    <div class="terms__row">
+                      <div class="custom-checkbox" onclick="toggleCheck(this)">
+                        <input type="checkbox" id="agree02" name="agree" value="agree02" style="display: none;">
+                      </div>
+                      <label for="agree02" onclick="toggleCheck(this)">설문조사 활용을 위한 개인정보 동의 (선택)</label>
+                      <button type="button" class="open-modal" data-target="modal2">></button>
+                    </div>
+                  </div>
+                  
+
+                <button type="submit" class="submit__btn">신청완료</button>
+            </form>
+        </div>
+    </section>
+
+     <!-- 모달 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>채용상담을 위한 개인정보 동의서</h3>
+      <p>채용상담 관련 개인정보 수집 및 이용에 대한 동의 내용을 여기에 입력합니다...</p>
     </div>
+  </div>
+
+  <!-- 모달 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>설문조사 활용을 위한 개인정보 동의</h3>
+      <p>설문조사 관련 개인정보 수집 및 이용에 대한 동의 내용을 여기에 입력합니다...</p>
+    </div>
+  </div>
+
 
 
     <div id="wrap">
@@ -139,7 +181,7 @@
 
                         <img src="./img/money-back.png" alt="돈주머니 이미지">
 
-                        <h3 class="f30 fw600">보상의신 고객분들은 평균 <br>
+                        <h3 class="f40 fw600">보상의신 고객분들은 평균 <br>
                             <b class="sec02__before fc-white"> 80만원 이상 </b> 찾아냈어요!
                         </h3>
                     </div>
@@ -168,18 +210,23 @@
 
                     <!-- 이 영역 .swiper-slide 안에 이벤트 이미지 넣으시면 됩니다  -->
                     <div class="sec05">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                </div>
-                                <div class="swiper-slide"></div>
-                                <div class="swiper-slide"></div>
-                                <div class="swiper-slide"></div>
-                            </div>
-                        </div>
+                        <h3 class="f30">사라지전에 돈을 찾으시려면</h3>
+                        <h2 class="f40 fw600">보상의신 어때요?</h2>
 
-                        <div class="swiper-button-prev"></div>
+                        <div class="sec05__swiper">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                    </div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-prev"></div>
+                        </div>
                     </div>
 
                 </div>
