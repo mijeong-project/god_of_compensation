@@ -29,25 +29,25 @@
         <div class="form__backdrop"></div>
         <div class="form__wrapper">
             <span class="close">&times;</span>
-
+    
             <h2 class="title f20">
                 <img src="./img/LOGO.png" alt="로고이미지">
                 상담 신청하기
             </h2>
             <p class="subtitle">빠른 상담을 위해<br><strong class="fw600 fc-black f30">최소한의 정보만 받고 있어요</strong></p>
-
+    
             <form class="consult__form">
-
+    
                 <div class="form__group">
                     <label for="name">이름 <b class="fc-red">*</b></label>
                     <input type="text" id="name" placeholder="예) 홍길동">
                 </div>
-
+    
                 <div class="form__group">
                     <label for="phone">휴대전화 <b class="fc-red">*</b></label>
                     <input type="text" id="phone" placeholder="-를 제외한 번호만 입력해주세요">
                 </div>
-
+    
                 <div class="form__group">
                     <label>지역 <b class="fc-red">*</b></label>
                     <div class="select__group">
@@ -55,66 +55,146 @@
                             <option value="">시/도</option>
                             <option value="서울">서울</option>
                             <option value="경기">경기</option>
+                            <option value="인천">인천</option>
+                            <option value="강원">강원</option>
+                            <option value="충북">충북</option>
+                            <option value="충남">충남</option>
+                            <option value="대전">대전</option>
+                            <option value="세종특별자치도">세종특별자치도</option>
+                            <option value="전북">전북</option>
+                            <option value="전남">전남</option>
+                            <option value="광주">광주</option>
+                            <option value="경북">경북</option>
+                            <option value="경남">경남</option>
                             <option value="부산">부산</option>
+                            <option value="대구">대구</option>
+                            <option value="울산">울산</option>
+                            <option value="제주특별자치도">제주특별자치도</option>
                         </select>
-
+    
                         <select id="district">
                             <option value="">시/군/구</option>
                         </select>
                     </div>
                 </div>
-
+    
                 <div class="terms">
-                    
+    
                     <div class="terms__row">
-                      <div class="custom-checkbox" onclick="toggleCheck(this)">
-                        <input type="checkbox" id="selectall" style="display: none;">
-                      </div>
-                      <label for="selectall" onclick="toggleCheck(this)" class="bold">약관에 전체 동의합니다</label>
-                      <small>* 전체 동의 시 선택 동의도 포함되며, 개별 선택도 가능합니다.</small>
+                        <div class="custom-checkbox" onclick="toggleCheck(this)">
+                            <input type="checkbox" id="selectall" style="display: none;">
+                        </div>
+    
+                        <label for="selectall" onclick="toggleCheck(this)" class="bold">약관에 전체 동의합니다</label>
+                        <small>* 전체 동의 시 선택 동의도 포함되며, 개별 선택도 가능합니다.</small>
                     </div>
-                  
+                    <div class="terms__col" style="display: none;">* 전체 동의 시 선택 동의도 포함되며, 개별 선택도 가능합니다.</div>
                     <div class="terms__row">
-                      <div class="custom-checkbox" onclick="toggleCheck(this)">
-                        <input type="checkbox" id="agree01" name="agree" value="agree01" style="display: none;">
-                      </div>
-                      <label for="agree01" onclick="toggleCheck(this)">채용상담을 위한 개인정보 동의서 (필수)</label>
-                      <button type="button" class="open-modal" data-target="modal1">></button>
+                        <div class="custom-checkbox" onclick="toggleCheck(this)">
+                            <input type="checkbox" id="agree01" name="agree" value="agree01" style="display: none;">
+                        </div>
+    
+                        <label for="agree01" onclick="toggleCheck(this)">채용상담을 위한 개인정보 동의서 (필수)</label>
+                        <button type="button" class="open-modal" data-target="modal1">></button>
                     </div>
-                  
+    
                     <div class="terms__row">
-                      <div class="custom-checkbox" onclick="toggleCheck(this)">
-                        <input type="checkbox" id="agree02" name="agree" value="agree02" style="display: none;">
-                      </div>
-                      <label for="agree02" onclick="toggleCheck(this)">설문조사 활용을 위한 개인정보 동의 (선택)</label>
-                      <button type="button" class="open-modal" data-target="modal2">></button>
+                        <div class="custom-checkbox" onclick="toggleCheck(this)">
+                            <input type="checkbox" id="agree02" name="agree" value="agree02" style="display: none;">
+                        </div>
+    
+                        <label for="agree02" onclick="toggleCheck(this)">설문조사 활용을 위한 개인정보 동의 (선택)</label>
+                        <button type="button" class="open-modal" data-target="modal2">></button>
                     </div>
-                  </div>
-                  
-
+                </div>
+    
                 <button type="submit" class="submit__btn">신청완료</button>
             </form>
         </div>
     </section>
-
-     <!-- 모달 1 -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>채용상담을 위한 개인정보 동의서</h3>
-      <p>채용상담 관련 개인정보 수집 및 이용에 대한 동의 내용을 여기에 입력합니다...</p>
+    
+    <!-- 모달 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal__content">
+            <span class="close">&times;</span>
+    
+            <h3 class="f14 fw600"><b class="fc-red">[필수]</b> 보상의 신 채용상담을 위한 개인정보 동의서</h3>
+            <small>* 본 동의서는 보상의 신이 개인정보처리자로서 수집 · 이용합니다.</small>
+            <hr>
+    
+            <div class="modal__txt">
+                <div class="txt__box">
+                    <h4 class="f14 fw600">1. 수집 · 이용에 관한 사항</h4>
+                    <h5 class="f14"><span class="txt__circle">·</span> 수집 · 이용목적</h5>
+                    <p>보상의 신 채용 상담 진행 및 관련 안내 제공</p>
+                    <p>보상의 신에 대한 채용 정보 및 지원 방법 등 안내 제공</p>
+                    <p>상담 후 추가적인 지원 안내 및 관련 서비스에 대한 안내 제공</p>
+                </div>
+    
+                <div class="txt__box">
+                    <h5 class="f14"><span class="txt__circle">·</span> 보유 및 이용기간</h5>
+                    <p>동의일로부터 3개월이며 이후에는 지체없이 파기됩니다.</p>
+                </div>
+    
+                <div class="txt__box">
+                    <h5 class="f14"><span class="txt__circle">·</span> 거부 권리 및 불이익</h5>
+                    <p>개인정보 수집·이용에 동의하지 않을 수 있으나, 동의하지 않을 경우 상담 제공이 제한될 수 있습니다.</p>
+                </div>
+    
+                <h4 class="f14 fw600 mt20">2. 수집 · 이용항목</h4>
+                <div class="txt__background">
+                    <strong>개인(신용) 정보</strong>
+                    <p>- 일반 개인정보: 성명, 거주지, 연락처, 전화번호, 상담 가능시간, 직업</p>
+                </div>
+    
+                <div class="agree__check ">
+                    <p class="fc-red">위 개인정보를 수집/이용 하는 것에 동의합니다.</p>
+                    <div class="radio-group">
+                        <input type="radio" name="agree1" style="display: none;"> 
+                        <label>동의함</label>
+                        <input type="radio" name="agree1" style="display: none;"> 
+                        <label>동의하지 않음</label>
+                    </div>
+    
+                    <p class="fc-red">채용안내 관련 광고성(전화/문자) 수신에 동의합니다.</p>
+                    <div class="radio-group">
+                        <input type="radio" name="agree2" style="display: none;"> 
+                        <label>동의함</label>
+                        <input type="radio" name="agree2" style="display: none;">
+                        <label> 동의하지 않음</label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal__footer">
+                <button type="button" class="modal__button">전체 동의</button>
+            </div>
+    
+        </div>
     </div>
-  </div>
-
-  <!-- 모달 2 -->
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>설문조사 활용을 위한 개인정보 동의</h3>
-      <p>설문조사 관련 개인정보 수집 및 이용에 대한 동의 내용을 여기에 입력합니다...</p>
+    
+    
+    <div id="modal2" class="modal">
+        <div class="modal__content">
+            <span class="close">&times;</span>
+    
+            <h3 class="f14 fw600"><b class="fc-red">[선택]</b>설문조사 활용을 위한 개인정보 동의</h3>
+            <small>본 동의서는 보상의신이 개인정보처리자로서 수집 · 이용합니다.</small>
+            <hr>
+            <div class="modal__txt">
+                <div class="txt__box">
+                    <h4 class="f14 fw600">1. 수집 · 이용에 관한 사항</h4>
+                    <h5 class="f14"><span class="txt__circle">·</span> 수집 · 이용목적</h5>
+                    <p>보상의 신에 대한 채용 정보 및 지원 방법 등 안내 제공</p>
+                </div>
+            </div>
+    
+            <div class="modal__footer">
+                <button type="button" class="modal__button">전체 동의</button>
+            </div>
+        </div>
     </div>
-  </div>
-
+    
 
 
     <div id="wrap">
@@ -140,7 +220,7 @@
 
                 <div class="hero__sub">
                     <h3 class="f30 fc-white fw200"><b>현명한 보험금 청구는 ,</b> <br>
-                        쉽고 편하게, 누락 없이 최대한 받으셔야 해요!
+                        쉽고 편하게,<span></span> 누락 없이 최대한 받으셔야 해요!
                     </h3>
                 </div>
             </div>
@@ -152,23 +232,23 @@
                     <div class="sec01">
                         <ul>
                             <li class="sec01__imgbox box1"></li>
-                            <li class="fw400 f20"> 후유장해 </li>
+                            <li class="fw400 f20 media-txt"> 후유장해 </li>
                         </ul>
                         <ul>
                             <li class="sec01__imgbox box2"></li>
-                            <li class="fw400 f20"> 특수검사 </li>
+                            <li class="fw400 f20 media-txt"> 특수검사 </li>
                         </ul>
                         <ul>
                             <li class="sec01__imgbox box3"></li>
-                            <li class="fw400 f20"> 중도보험금 </li>
+                            <li class="fw400 f20 media-txt"> 중도보험금 </li>
                         </ul>
                         <ul>
                             <li class="sec01__imgbox box4"></li>
-                            <li class="fw400 f20"> 휴면보험금 </li>
+                            <li class="fw400 f20 media-txt"> 휴면보험금 </li>
                         </ul>
                         <ul>
                             <li class="sec01__imgbox box5 "></li>
-                            <li class="fw400 f20"> 만기보험금 </li>
+                            <li class="fw400 f20 media-txt"> 만기보험금 </li>
                         </ul>
 
                     </div>
@@ -182,11 +262,11 @@
                         <img src="./img/money-back.png" alt="돈주머니 이미지">
 
                         <h3 class="f40 fw600">보상의신 고객분들은 평균 <br>
-                            <b class="sec02__before fc-white"> 80만원 이상 </b> 찾아냈어요!
+                            <b class="sec02__before2 fc-white"> 80만원 이상 </b> 찾아냈어요!
                         </h3>
                     </div>
 
-                    <div class="sec03">
+                    <div class="sec03 f30">
                         <ul class="sec03__ul">
                             <li class="fw600">못받은 보험금</li>
                             <li><img src="./img/adress-icon.png" alt="못받은 보험금 아이콘"></li>
@@ -200,7 +280,7 @@
                         </ul>
                     </div>
 
-                    <div class="sec04">
+                    <div class="sec04 f30">
                         <ol class="sec04__ol">
                             <li>교통사고 합의금 외 추가 보험금</li>
                             <li>건강검진 후 수술비 관련 보험금</li>
@@ -219,7 +299,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                     </div>
-                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"><img src="./img/Untitled-1.png" alt=""></div>
                                     <div class="swiper-slide"></div>
                                     <div class="swiper-slide"></div>
                                 </div>
@@ -238,10 +318,17 @@
                     <h2 class="fc-white f40 fw600">보상의신 어때요?</h2>
 
                     <ul class="sec06__ul">
-                        <li><img src="./img/step01.png" alt="무료상담 신청 아이콘"></li>
+                        <li><img src="./img/step01.png " alt="무료상담 신청 아이콘"></li>
                         <li><img src="./img/step02.png" alt="전문가 배정 아이콘"></li>
                         <li><img src="./img/step04.png" alt="상담을 통한 보험금 찾기 아이콘"></li>
                         <li><img src="./img/step03.png" alt="보험금 청구 후 입금받기 아이콘"></li>
+                    </ul>
+
+                    <ul class="sec06__ul__mobil">
+                        <li><img src="./img/step01_mobil.png " alt="무료상담 신청 아이콘"></li>
+                        <li><img src="./img/step02_mobil.png" alt="전문가 배정 아이콘"></li>
+                        <li><img src="./img/step03_mobil.png" alt="상담을 통한 보험금 찾기 아이콘"></li>
+                        <li><img src="./img/step04_mobil.png" alt="보험금 청구 후 입금받기 아이콘"></li>
                     </ul>
 
                 </div>

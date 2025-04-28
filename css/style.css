@@ -1,28 +1,26 @@
 @charset "utf-8";
 
-
-
-.form__section.modal {
+/* 모달 */
+.form__section {
   display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
   justify-content: center;
   align-items: center;
 }
 
-.form__section.modal .form__backdrop {
+.form__section .form__backdrop {
   position: absolute;
   top: 0; left: 0;
   width: 100%; 
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
-.form__section.modal .form__wrapper {
+.form__section .form__wrapper {
   position: relative;
   z-index: 2;
   transform: translateY(100px);
@@ -30,14 +28,16 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.form__section.modal.active .form__wrapper {
-  transform: translateY(0);
+.form__section.active .form__wrapper {
+  transform: translateY(10px);
   opacity: 1;
+  height: auto;
 }
 
 .form__wrapper {
-  width: 50%;
-  margin: 0 auto;
+  width: 40%;
+  height: 100vh;
+  margin: auto;
   background: #fff;
   padding: 40px 30px;
   border-radius: 15px;
@@ -55,12 +55,12 @@
 
 .subtitle {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: #888;
 }
 
 .consult__form .form__group {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 label {
@@ -111,7 +111,7 @@ input, select {
   font-weight: bold;
 }
 
-.terms__row small {
+small {
   margin-top: 5px;
   font-size: 12px;
   color: #999;
@@ -130,6 +130,10 @@ input, select {
   z-index: 99;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .open-modal {
   background: none;
   border: none;
@@ -141,7 +145,7 @@ input, select {
 .submit__btn {
   width: 100%;
   background: var(--blue);
-  color: white;
+  color: var(--white);
   font-size: 18px;
   padding: 16px;
   border: none;
@@ -157,24 +161,31 @@ input, select {
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
-  left: 0; 
   top: 0;
+  left: 0;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 1000;
+  overflow: hidden;
 }
 
-.modal-content {
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
-  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
   border-radius: 10px;
-  width: 50%;
-  height: 100%;
-  margin: auto;
-  position: relative;
-  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal__content.slide-up {
+  opacity: 1;
 }
 
 .modal.active {
@@ -182,6 +193,18 @@ input, select {
   opacity: 1;
 }
 
+.modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal__content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.modal__content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
 .close {
   position: absolute;
   top: 20px;
@@ -190,6 +213,99 @@ input, select {
   cursor: pointer;
 }
 
+.modal__txt {
+  margin-top: 20px;
+}
+
+.modal__txt p {
+  color: #888;
+  text-indent: 10px;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.txt__circle {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.txt__box {
+  padding: 10px 0;
+}
+
+.txt__background {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.agree__check {
+  margin-top: 40px;
+}
+
+.agree__check p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.radio-group label {
+  font-size: 14px;
+  color: #555;
+}
+
+.radio-group label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  line-height: 24px;
+}
+
+.radio-group label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url('../img/agree.png') no-repeat center center / cover;
+  transform: translateY(-50%);
+}
+
+.radio-group input[type="radio"]:checked + label::before {
+  background: url('../img/agree_on.png') no-repeat center center / cover;
+}
+
+.modal__footer {
+  margin-top: 50px;
+}
+
+.modal__button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.modal__button:hover {
+  background-color: #2563eb;
+}
 
 
 /* hero */
@@ -208,12 +324,17 @@ input, select {
 }
 .hero__top h1:nth-of-type(1){
     margin: 100px -100px 0 0;
+    z-index: 2;
 }
 .hero__top h1:nth-of-type(2){
-    margin: 100px 0 0 -100px;
+    margin: 100px 0 0 -110px;
+}
+.hero__meddle h3{
+  margin: 10px 0 15px;
 }
 .meddle__title{
     display: flex;
+    justify-content: center;
     gap: 30px;
     align-items: center;
     background-color: var(--white);
@@ -229,7 +350,9 @@ input, select {
 .hero__sub{
     padding: 80px 0;
 }
-
+.hero__sub span{
+  display: none;
+}
 /* section01 */
 .sec01{
     display: flex;
@@ -267,25 +390,39 @@ input, select {
 .sec02 img{
     padding: 50px 0;
 }
-.sec02__before{
+.sec02__before,
+.sec02__before2{
     position: relative;
+    display: inline-block;
 }
 .sec02__before::before{
     content: "";
     background-color: var(--blue);
-    width: 100%;
-    height: 30px;
+    width: 110%;
+    height: 100%;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
 }
-
+.sec02__before2::before{
+  content: "";
+  background-color: var(--blue);
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 /* sec03 */
 .sec03{
     display: flex;
     justify-content: center;
     gap: 50px;
-    font-size: 30px;
-    padding: 30px 0;
+    padding: 80px 0 30px;
 }
 .sec03__ul{
     background-color: var(--skyblue);
@@ -298,20 +435,22 @@ input, select {
 
 /* sec04 */
 .sec04{
-    font-size: 30px;
     color: var(--white);
     font-weight: 200;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .sec04__ol li{
     background-color: var(--blue);
     border-radius: 50px;
     width: 700px;
     margin: 30px auto;
-    padding: 10px 40px;
+    padding: 15px 40px;
 }
 
 /* 슬라이드 sec05*/
+.sec05{
+  padding: 50px 0;
+}
 .sec05 h3{
   margin-bottom: 20px;
 }
@@ -342,7 +481,11 @@ input, select {
     text-align: center;
   }
   
-  
+  .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
   .swiper-button-prev,
   .swiper-button-next {
     background-color: var(--blue);
@@ -379,7 +522,10 @@ input, select {
   .sec06__ul img{
     width: 300px;
   }
-
+.sec06__ul__mobil{
+  display: none;
+  gap: 50px;
+}
   /* footer */
   footer{
     background-color: var(--white);
@@ -405,9 +551,9 @@ input, select {
 
 /* 고정메뉴 */
 .fixed{
-    width: 80%;
+    width: 60%;
     margin: auto;
-    background-color: var(--blue);
+    background-color: #538CFF;
     border-radius: 10px;
     padding: 20px 0;
     position: fixed;
