@@ -132,7 +132,7 @@
   }
   .form__section.modal.active .form__wrapper,
   .modal__content.slide-up{
-    width: 80%;
+    width: 90%;
   }
 
   .select__group{
@@ -238,6 +238,9 @@
   .swiper{
     width: 300px;
     height: 300px;
+  }
+  .modal__content h3{
+    margin-top: 20px;
   }
 }
 
