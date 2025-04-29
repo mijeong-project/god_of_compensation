@@ -7,7 +7,16 @@
   }
 }
 
+@media (max-width: 1200px){
+  .sec01__col01, .sec01__col02,.sec01{
+    gap: 10px;
+  }
+}
+
 @media (max-width: 1000px) {
+  .sec01__col01, .sec01__col02, .sec01{
+    gap: 30px;
+  }
   .sec01__imgbox {
     width: 150px;
     height: 100px;
@@ -31,6 +40,16 @@
   }
 }
 
+@media (max-width: 860px){
+  .sec01{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .sec01__col01, .sec01__col02{
+    gap: 50px;
+  }
+}
+
 @media (max-width: 800px) {
   .hero__sub {
     padding: 50px 0;
@@ -47,13 +66,6 @@
 
   .hero__top h1:nth-of-type(2) {
     margin-left: -150px;
-  }
-
-  .sec01 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    gap: 30px;
   }
 
   .sec02 img {
@@ -77,7 +89,7 @@
   }
 
   .fixed {
-    width: 100%;
+    width: 90%;
   }
 
 }
@@ -141,32 +153,16 @@
 }
 
 @media (max-width: 550px) {
+  .sec01__imgbox{
+    width: 120px;
+    height: 80px;
+  }
   .meddle__title{
     gap: 10px;
   }
   .meddle__title img{
     width: 150px;
     height: 30px;
-  }
-  .sec01{
-    display: flex;
-    flex-direction: column;
-    padding: 30px 0;
-    gap: 20px;
-  }
-  .sec01__imgbox{
-    display: none;
-  }
-  .sec01 ul{
-    background-color: var(--skyblue);
-    width: 90%;
-    padding: 15px 10px;
-    border-radius: 50px;
-    color: var(--blue);
-  }
-  .media-txt{
-    font-weight: 600;
-    font-size: 20px;
   }
   .sec03 {
     flex-direction: column;
@@ -183,6 +179,9 @@
 }
 
 @media (max-width: 480px){
+  .sec01__col01, .sec01__col02{
+    gap: 10px;
+  }
   .swiper-button-prev,
   .swiper-button-next {
     padding: 14px;
@@ -232,6 +231,13 @@
   .hero__top h1:nth-of-type(2){
     margin-left: -80px;
   }
+  .sec01__imgbox{
+    width: 100px;
+    height: 60px;
+  }
+  .sec01__col01, .sec01__col02{
+    gap: 20px;
+  }
   .sec05__swiper{
     padding: 50px 0;
   }
@@ -253,6 +259,16 @@
   }
   .hero__sub span{
     display: block;
+  }
+  .sec01{
+    padding: 30px 0;
+  }
+  .sec01__col01, .sec01__col02{
+    gap:10px;
+  }
+  .sec01__imgbox{
+    width: 90px;
+    height: 50px;
   }
   .swiper{
     width: 280px;

@@ -362,10 +362,14 @@ input[type="radio"]:checked + label::before {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    gap: 50px;
+    justify-content: center;
     padding: 50px 0;
 }
-
+.sec01__col01, .sec01__col02{
+  display: flex;
+  gap: 50px;
+}
 .sec01__imgbox{
     width: 200px;
     height: 150px;
@@ -557,7 +561,8 @@ input[type="radio"]:checked + label::before {
 .fixed{
     width: 60%;
     margin: auto;
-    background-color: #538CFF;
+    background-color: #fff;
+    border: 2px solid var(--blue);
     border-radius: 10px;
     padding: 20px 0;
     position: fixed;
