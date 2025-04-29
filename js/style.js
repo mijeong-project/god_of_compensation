@@ -59,17 +59,30 @@ document.querySelectorAll('.open-modal').forEach(btn => {
   });
 });
 
-// 모달 닫기
-document.querySelectorAll('.close, .submit__btn').forEach(btn => {
+// 모달 닫기 (누른 버튼이 속한 모달 타입에 따라 구분)
+document.querySelectorAll('.close, .submit__btn, .modal__button').forEach(btn => {
   btn.addEventListener('click', function () {
-    const modal = this.closest('.modal');
-    modal.classList.remove('active');
-    modal.querySelector('.modal__content').classList.remove('slide-up');
-    setTimeout(() => {
-      modal.style.display = 'none';
-    }, 400);
+    const closestModal = this.closest('.modal');
+    const closestFormSection = this.closest('.form__section');
+
+    if (closestModal) {
+      closestModal.classList.remove('active');
+      closestModal.querySelector('.modal__content')?.classList.remove('slide-up');
+      setTimeout(() => {
+        closestModal.style.display = 'none';
+      }, 400);
+    }
+
+    if (closestFormSection) {
+      closestFormSection.classList.remove('active');
+      setTimeout(() => {
+        closestFormSection.style.display = 'none';
+        document.body.classList.remove('modal-open');
+      }, 400);
+    }
   });
 });
+
 // ============== 체크박스 상태 토글 ==============
 function toggleCheck(element) {
   let checkbox;

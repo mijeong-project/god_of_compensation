@@ -194,6 +194,22 @@
   .sec06{
     padding: 50px 0;
   }
+  .form__wrapper img{
+    width: 100px;
+    height: 20px;
+  }
+  .consult__form .form__group {
+    margin-bottom: 20px;
+  }
+  label,input, select{
+    font-size: 13px;
+  }
+  .agree__check p,.radio-group label,  .txt__box p,.terms__row label{
+    font-size: 12px;
+  }
+  .close{
+    top: 6px;
+  }
 }
 
 @media (max-width: 441px){

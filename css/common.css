@@ -79,6 +79,7 @@ hr{border: 1px solid #888; color: #888; margin: 10px 0;}
  .f30{ font-size: 18px;}
  .f20{ font-size: 16px;}
  .f16{ font-size: 14px;}
+ .f14{ font-size: 12px;}
 }
 
 @media (max-width: 380px){

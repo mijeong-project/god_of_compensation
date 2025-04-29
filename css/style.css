@@ -6,6 +6,7 @@
   position: fixed;
   top: 0; left: 0;
   width: 100%;
+  transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s ease;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -17,26 +18,30 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; 
+  transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s ease;
   z-index: 1;
 }
 
 .form__section .form__wrapper {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  transform: translateY(100px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s ease;
+  width: 40%;
+  height: auto; 
 }
 
 .form__section.active .form__wrapper {
-  transform: translateY(10px);
   opacity: 1;
-  height: auto;
 }
 
 .form__wrapper {
   width: 40%;
-  height: 100vh;
+  max-height: 90vh;
+  overflow-y: auto;
   margin: auto;
   background: #fff;
   padding: 40px 30px;
@@ -177,13 +182,13 @@ body.modal-open {
   transform: translate(-50%, -50%);
   background: #fff;
   width: 80%;
+  transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s ease;
   max-width: 600px;
   padding: 20px;
   border-radius: 10px;
   max-height: 90vh;
   overflow-y: auto;
 }
-
 .modal__content.slide-up {
   opacity: 1;
 }
@@ -220,7 +225,6 @@ body.modal-open {
 .modal__txt p {
   color: #888;
   text-indent: 10px;
-  font-size: 14px;
   margin: 5px 0;
 }
 
@@ -284,7 +288,7 @@ body.modal-open {
   transform: translateY(-50%);
 }
 
-.radio-group input[type="radio"]:checked + label::before {
+input[type="radio"]:checked + label::before {
   background: url('../img/agree_on.png') no-repeat center center / cover;
 }
 

@@ -150,18 +150,18 @@
                 <div class="agree__check ">
                     <p class="fc-red">위 개인정보를 수집/이용 하는 것에 동의합니다.</p>
                     <div class="radio-group">
-                        <input type="radio" name="agree1" style="display: none;"> 
-                        <label>동의함</label>
-                        <input type="radio" name="agree1" style="display: none;"> 
-                        <label>동의하지 않음</label>
+                        <input type="radio" id="agree1_yes" name="agree1" style="display: none;"> 
+                        <label for="agree1_yes">동의함</label>
+                        <input type="radio" id="agree1_no" name="agree1" checked style="display: none;"> 
+                        <label for="agree1_no">동의하지 않음</label>
                     </div>
     
                     <p class="fc-red">채용안내 관련 광고성(전화/문자) 수신에 동의합니다.</p>
                     <div class="radio-group">
-                        <input type="radio" name="agree2" style="display: none;"> 
-                        <label>동의함</label>
-                        <input type="radio" name="agree2" style="display: none;">
-                        <label> 동의하지 않음</label>
+                        <input type="radio" id="agree2_yes" name="agree2" style="display: none;"> 
+                        <label for="agree2_yes">동의함</label>
+                        <input type="radio" id="agree2_no" name="agree2" checked style="display: none;">
+                        <label for="agree2_no"> 동의하지 않음</label>
                     </div>
                 </div>
             </div>
@@ -172,30 +172,57 @@
     
         </div>
     </div>
-    
     
     <div id="modal2" class="modal">
         <div class="modal__content">
             <span class="close">&times;</span>
     
-            <h3 class="f14 fw600"><b class="fc-red">[선택]</b>설문조사 활용을 위한 개인정보 동의</h3>
-            <small>본 동의서는 보상의신이 개인정보처리자로서 수집 · 이용합니다.</small>
+            <h3 class="f14 fw600"><b class="fc-red">[필수]</b> 보상의 신 채용상담을 위한 개인정보 동의서</h3>
+            <small>* 본 동의서는 보상의 신이 개인정보처리자로서 수집 · 이용합니다.</small>
             <hr>
+    
             <div class="modal__txt">
-                <div class="txt__box">
-                    <h4 class="f14 fw600">1. 수집 · 이용에 관한 사항</h4>
-                    <h5 class="f14"><span class="txt__circle">·</span> 수집 · 이용목적</h5>
+                <div class="txt__box f14">
+                    <h4 class="fw600">1. 수집 · 이용에 관한 사항</h4>
+                    <h5><span class="txt__circle">·</span> 수집 · 이용목적</h5>
+                    <p>보상의 신 채용 상담 진행 및 관련 안내 제공</p>
                     <p>보상의 신에 대한 채용 정보 및 지원 방법 등 안내 제공</p>
+                    <p>상담 후 추가적인 지원 안내 및 관련 서비스에 대한 안내 제공</p>
+                </div>
+    
+                <div class="txt__box f14">
+                    <h5><span class="txt__circle">·</span> 보유 및 이용기간</h5>
+                    <p>동의일로부터 3개월이며 이후에는 지체없이 파기됩니다.</p>
+                </div>
+    
+                <div class="txt__box f14">
+                    <h5><span class="txt__circle">·</span> 거부 권리 및 불이익</h5>
+                    <p>개인정보 수집·이용에 동의하지 않을 수 있으나, 동의하지 않을 경우 상담 제공이 제한될 수 있습니다.</p>
+                </div>
+    
+                <h4 class="f14 fw600 mt20">2. 수집 · 이용항목</h4>
+                <div class="txt__background f14">
+                    <strong>개인(신용) 정보</strong>
+                    <p class="f14">- 일반 개인정보: 성명, 거주지, 연락처, 전화번호, 상담 가능시간, 직업</p>
+                </div>
+    
+                <div class="agree__check">
+                    <p class="fc-red">위 개인정보를 수집/이용 하는 것에 동의합니다.</p>
+                    <div class="radio-group">
+                        <input type="radio" id="agree1_yes" name="agree1" style="display: none;"> 
+                        <label for="agree1_yes">동의함</label>
+                        <input type="radio" id="agree1_no" name="agree1" checked style="display: none;"> 
+                        <label for="agree1_no">동의하지 않음</label>
+                    </div>
                 </div>
             </div>
     
             <div class="modal__footer">
                 <button type="button" class="modal__button">전체 동의</button>
             </div>
+    
         </div>
     </div>
-    
-
 
     <div id="wrap">
         <!-- main -->
