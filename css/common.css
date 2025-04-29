@@ -12,9 +12,7 @@ body{ min-height: 100%; font-family:'S-CoreDream-3Light'; color: #000;}
 #wrap{ max-width: 1920px; margin: auto; word-break: keep-all;  text-align: center;}
 section{ max-width: 1920px; margin: auto;}
 .inner{ max-width: 1200px; margin: auto;}
-select {-webkit-appearance: none;
-    -moz-appearance: none; 
-    appearance: none; background: #fff url(../img/select_btn.png) no-repeat 98% center;}
+select {-webkit-appearance: none;  -moz-appearance: none; appearance: none; background: #fff url(../img/select_btn.png) no-repeat 98% center; color: inherit;}
 
 b{ font-weight: 600;}
 hr{border: 1px solid #888; color: #888; margin: 10px 0;}
