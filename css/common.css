@@ -6,6 +6,7 @@
     --black : #000;
     --skyblue : #DEE9FF;
 }
+
 html{height: 100%;}
 body{ min-height: 100%; font-family:'S-CoreDream-3Light'; color: #000;}
 #wrap{ max-width: 1920px; margin: auto; word-break: keep-all;  text-align: center;}
